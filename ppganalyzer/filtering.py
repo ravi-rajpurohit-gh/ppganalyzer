@@ -21,6 +21,5 @@ def apply_filter(signal, filter_type='lowpass', cutoff=2.5, fs=100, order=5):
         normal_cutoff = cutoff / nyquist
     
     b, a = butter(order, normal_cutoff, btype=filter_type, analog=False)
-    filtered_signal = filtfilt(b, a, signal)
-    return filtered_signal
+    return filtfilt(b, a, signal)
  
